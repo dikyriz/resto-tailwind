@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500;600;700;800&family=Fredoka+One&family=Inter:wght@300;400;500;600;700&family=Nunito:wght@800&family=Poppins:wght@300;400;500;600;700;800&family=Yuji+Syuku&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .flex-card {
+    @apply bg-white md:rounded-3xl rounded-lg text-center hover:shadow-md h-[347px] md:w-[315px] pt-10 relative dark:bg-slate-800 transform transition duration-500 hover:scale-105;
+  }
+
+  .flex-card-container-img {
+    @apply bg-orange-100 rounded-full h-20 w-20 m-auto grid dark:bg-slate-700;
+  }
+
+  .flex-card-container-btn {
+    @apply rounded-t-xl lg:rounded-b-3xl rounded-b-lg h-[72px] group-hover:bg-orange-300 lg:w-[315px] w-full absolute bottom-0 dark:group-hover:bg-slate-700/75;
+  }
+
+  .flex-card-btn {
+    @apply text-base font-semibold text-Hitam-0 leading-[72px] group-hover:text-white dark:text-slate-300 dark:group-hover:text-slate-100;
+  }
+
+  .food-name {
+    @apply font-medium lg:text-base text-sm text-semiHitam-0 uppercase dark:text-slate-100;
+  }
+
+  .resto-name {
+    @apply font-semibold lg:text-xl text-lg text-Hitam-0 mt-1 dark:text-slate-100;
+  }
+
+  .resto-location {
+    @apply normal-case lg:text-base text-sm text-semiHitam-0 mt-1 dark:text-slate-100;
+  }
+
+  .btn-card-arrow {
+    @apply bg-orange-300 py-2 px-4 h-12 md:h-9 w-full lg:w-12 lg:h-10 lg:rounded-xl rounded-b-xl hover:bg-orange-400/75 dark:bg-slate-700 dark:hover:bg-slate-700/75 text-xs lg:text-base;
+  }
+}
+
+@layer utilities {
+  @keyframes scale1 {
+    0% {
+      opacity: 0;
+      transform: translateX(40%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .scale1 {
+    animation: scale1 1s;
+  }
+  @keyframes scale2 {
+    0% {
+      opacity: 0; 
+      transform: translateX(-20%);
+    }
+    100% {
+      opacity: 1; 
+      transform: translateX(0);
+    }
+  }
+  .scale2 {
+    animation: scale2 1s;
+  }
+  .scale-right {
+    opacity: 0;
+  }
+  .scale-left {
+    opacity: 0;
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
+              opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+              opacity: 1;
+    }
+  }
+  .scale-top {
+    opacity: 0;
+  }
+  @keyframes scale-up-ver-center {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+              opacity: 0;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+              opacity: 1;
+    }
+  }
+  .btn-e {
+    opacity: 0;
+  }
+@keyframes fade-in-bck {
+  0% {
+    -webkit-transform: perspective(500px) translateZ(80px);
+            transform: perspective(500px) translateZ(80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: perspective(500px) translateZ(0);
+            transform: perspective(500px) translateZ(0);
+    opacity: 1;
+  }
+}
+  .picture-chef {
+    opacity: 0;
+  }
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+.scale-down-center {
+  animation: slide-left 1s;
+}
+
+@keyframes zoom-out {
+  100% {
+    width: 100%
+  }
+}
+
+.zoom-out {
+  animation: zoom-out 3s linear infinite;
+}
+
+
+}
+/* .mySlides {display: none;} */
+
+
+.accordion-content {
+    transition: max-height 0.5s cubic-bezier(.19,.73,.83,.62), padding 0.5s ease;
+}
+
+.custom {
+  object-position: 40% -5px;
+  object-fit: cover;
+}
+
+.color-yellow {
+  background-color: rgb(250 204 21);
+}
+
+.color-gray {
+  background-color: rgb(75 85 99);
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
+  background-size: 0 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#8b5cf6, #8b5cf6);
+}
+
+.link-underline:hover {
+  background-size: 100% 2px;
+  background-position: 0 100%;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 5.5s;
+}
+
+@keyframes fade {
+  from {
+    transform: perspective(500px);
+    transform: translateZ(-80px);
+    opacity: .4} 
+  to {
+    transform: perspective(500px);
+    transform: translateZ(0);
+    opacity: 1}
+}
+
+.faded {
+  animation-name: faded;
+  animation-duration: 5.5s;
+}
+
+@keyframes faded {
+  from {
+    opacity: 1} 
+  to {
+    opacity: 0}
+}
+
+.fader {
+  animation: fader 3.5s linear infinite;
+}
+
+@keyframes fader {
+  0%,10%,100% {
+      width: 0;
+  } 70%,90% {
+    width: 100%;
+  }
+}
+
+.fader-out {
+  animation-name: fader-out;
+  animation-duration: 2.5s;
+}
+
+@keyframes fader-out {
+  from {
+      
+      transform: translateX(0);
+  } to {
+    
+    transform: translateX(-20%);
+  }
+}
+
+.shadow-scroll {
+  @apply shadow-md;
+}
+
+.shadow-scroll-dark {
+  @apply shadow-sm;
+}
+
+@media only screen and (min-width: 200px) {
+  .link-underline:hover {
+    background-size: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .link-underline:hover {
+    background-size: 100% 2px;
+  }
+}
+
